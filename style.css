@@ -503,6 +503,56 @@ button {
     width: 100%;
 }
 
+#mu-about-panther {
+    background-image: url("assets/images/8.png");
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: inline;
+    float: left;
+    width: 100%;
+    padding-top: 50px
+}
+
+#mu-about-simple {
+    /*background-image: ;*/
+    background: transparent;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: inline;
+    float: left;
+    width: 100%;
+    padding-top: 50px
+}
+
+#mu-economy {
+    background: #d8d8d8;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: inline;
+    float: left;
+    width: 100%;
+    padding-top: 50px
+}
+
+#mu-prefooter {
+    background-image: url("assets/images/head-featured-bg.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: inline;
+    float: left;
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
 .mu-video-overlay {
     display: inline;
     float: left;
