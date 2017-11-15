@@ -1590,7 +1590,7 @@ button {
 @media (max-width: 767px) {
 
     .mu-logo img {
-        width: 150px;
+        height: 120px;
     }
 
 
