@@ -574,6 +574,7 @@ button {
     display: inline;
     float: left;
     padding: 200px 0;
+    padding-top: 100px;
     text-align: center;
     width: 100%;
 }
@@ -1893,4 +1894,14 @@ button {
 
 .progress-bar.gradient {
     background: linear-gradient(to right, #337ab7, #c4ddf3);
+}
+
+#mu-team {
+    display: inline;
+    width: 100%;
+    float: left;
+}
+
+ul.nav-center li.active > a {
+    color: white !important;
 }

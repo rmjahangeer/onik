@@ -124,12 +124,13 @@
         if (lastId !== id) {
             lastId = id;
             // Set/remove active class
-            menuItems
-              .parent().removeClass("active")
-              .end().filter("[href=\\#" + id + "]").parent().addClass("active");
+            var tosetActive = menuItems
+                .parent().removeClass("active")
+                .end().filter("[href=\\#" + id + "]");
+            if (id.indexOf('hero') === -1)
+                tosetActive.parent().addClass("active");
         }
-    })
-
+    });
 
 
     /* ----------------------------------------------------------- */
@@ -231,14 +232,4 @@
         $('.mu-navbar .in').collapse('hide');
     });
 
-
-
-
-
-
-
 })(jQuery);
-
-
-
-
