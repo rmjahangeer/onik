@@ -37,8 +37,10 @@
             //    $('.mu-navbar').removeClass('mu-nav-show');
             //}
             $('.mu-navbar').addClass('nav-bar-solid');
+            $('#nav-brandname').removeClass('hidden');
 
         } else {
+            $('#nav-brandname').addClass('hidden');
             $('.mu-navbar').removeClass('nav-bar-solid');
         }
     });
@@ -57,20 +59,20 @@
 
         var $this = $(this).html(event.strftime(''
             + '<span class="mu-event-counter-block-down">'
-            + '<span style="position: relative; bottom: 170px; right: 20px">%D</span> '
+            + '<span style="position: relative;bottom: 162px;right: 20px;">%D</span> '
             + '<span style="position: relative;bottom: 230px;font-size: 15px;right: 19px">Days</span>'
             + '</span>'
             + '<span class="mu-event-counter-block-up">'
-            + '<span style="position: relative; bottom: 15px; right: 20px">%H</span>'
-            + '<span style="position: relative;bottom: 70px;font-size: 15px;right: 19px">Hours</span>'
+            + '<span style="position: relative;bottom: 22px;right: 24px;">%H</span>'
+            + '<span style="position: relative;bottom: 90px;font-size: 15px;right: 19px;">Hours</span>'
             + '</span>'
             + '<span class="mu-event-counter-block-down">'
-            + '<span style="position: relative; bottom: 170px; right: 20px">%M</span>'
+            + '<span style="position: relative;bottom: 162px;right: 20px;">%M</span>'
             + '<span style="position: relative;bottom: 230px;font-size: 15px;right: 19px">Mins</span>'
             + '</span>'
             + '<span class="mu-event-counter-block-up">'
-            + '<span style="position: relative; bottom: 15px; right: 20px">%S</span>'
-            + '<span style="position: relative;bottom: 70px;font-size: 15px;right: 19px">Secs</span>'
+            + '<span style="position: relative;bottom: 22px;right: 24px;">%S</span>'
+            + '<span style="position: relative;bottom: 90px;font-size: 15px;right: 19px;">Secs</span>'
             + '</span>'
         ));
     });
@@ -182,7 +184,7 @@
 	/* ----------------------------------------------------------- */
 
     $('.mu-speakers-slider').slick({
-        slidesToShow: 4,
+        slidesToShow: 5,
         responsive: [
           {
               breakpoint: 768,

@@ -1,17 +1,40 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿@media(min-width: 768px) {
+    .nav-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.thumb-128 {
+    height: 128px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.thumb-192 {
+    height: 192px;
+}
+ 
+ .thumb-160 {
+    height: 160px;
+}
+
+.thumb-256 {
+    height: 256px;
+}
+
+.img-center {
+    display: block;
+    margin: auto;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mt-30 {
+    margin-top: 30px;
 }

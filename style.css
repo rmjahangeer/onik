@@ -220,12 +220,12 @@ button {
 /*--------------------*/
 
 #mu-hero {
-    background-image: url("assets/images/head-featured-bg.jpg");
+    background-image: url("assets/images/head-featured-bg.png");
     display: inline;
     float: left;
     width: 100%;
     background-position: center center;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -251,11 +251,11 @@ button {
     font-weight: 600;
     /*background: #fff;*/
     padding: 5px 20px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
     .mu-logo > img {
-        height: 150px;
+        height: 260px;
     }
 
 
@@ -285,7 +285,7 @@ button {
 .mu-hero-featured-area {
     display: inline;
     float: left;
-    padding: 60px 0 150px;
+    padding: 60px 0 0px;
     width: 100%;
 }
 
@@ -335,20 +335,17 @@ button {
 }
 
 .mu-event-counter-block-up {
-    
     display: inline-block;
     text-align: center;
     font-size: 22px;
     color: #fff;
     margin: 0 20px;
     font-weight: 300;
-
     width: 0;
     height: 0;
     border-left: 70px solid transparent;
     border-right: 70px solid transparent;
     border-bottom: 120px solid #505df1;
-
     bottom: 140px;
     position: relative;
 }
@@ -360,7 +357,6 @@ button {
     color: #505df1;
     margin: 0 20px;
     font-weight: 300;
-
     width: 0;
     height: 0;
     border-left: 70px solid transparent;
@@ -368,21 +364,21 @@ button {
     border-top: 120px solid white;
 }
 
-    .mu-event-counter-block-up span {
-        display: block;
-        font-size: 40px;
-        font-weight: 700;
-        padding-top: 56px;
-        line-height: 40px;
-    }
-    
-    .mu-event-counter-block-down span {
-        display: block;
-        font-size: 40px;
-        font-weight: 700;
-        padding-top: 56px;
-        line-height: 40px;
-    }
+.mu-event-counter-block-up span {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    padding-top: 56px;
+    line-height: 40px;
+}
+
+.mu-event-counter-block-down span {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    padding-top: 56px;
+    line-height: 40px;
+}
 
 /*--------------------*/
 /* MENU */
@@ -512,7 +508,7 @@ button {
     display: inline;
     float: left;
     width: 100%;
-    padding-top: 50px
+    padding-top: 50px;
 }
 
 #mu-about-simple {
@@ -525,7 +521,7 @@ button {
     display: inline;
     float: left;
     width: 100%;
-    padding-top: 50px
+    padding-top: 50px;
 }
 
 #mu-economy {
@@ -537,15 +533,29 @@ button {
     display: inline;
     float: left;
     width: 100%;
-    padding-top: 50px
+    padding-top: 50px;
 }
 
 #mu-prefooter {
-    background-image: url("assets/images/head-featured-bg.jpg");
+    background-image: url("assets/images/head-featured-bg.png");
     background-attachment: fixed;
     background-position: center center;
     -webkit-background-size: cover;
     background-size: cover;
+    display: inline;
+    float: left;
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+#mu-clients {
+    /*background-image: url("assets/images/head-featured-bg.png");
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;*/
+    background: white;
     display: inline;
     float: left;
     width: 100%;
@@ -1879,3 +1889,8 @@ button {
     #mu-hero .navbar-default a {
         color: white;
     }
+
+
+.progress-bar.gradient {
+    background: linear-gradient(to right, #337ab7, #c4ddf3);
+}
