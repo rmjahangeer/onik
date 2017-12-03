@@ -616,30 +616,98 @@
 
 @section scripts
 {
+    @Scripts.Render("~/bundles/jqueryval")
+
     <script>
         $(document).ready(function () {
-
-            $('#proceed').on('click', submitEmail);
-
-            function submitEmail() {
-                if (!$('#email').val()) {
-                    $('#email').parent().addClass('has-feedback has-error');
-                } else {
-                    $('#email').parent().removeClass('has-feedback has-error');
-                    $('#step1').addClass('hidden');
-                    $('#step2').removeClass('hidden');
-                    $('#step2').fadeIn();
+            $('#Male').select();
+            $('#Male').select();
+            var form = $('#myform');
+            form.on('submit', submitEmail);
+            form.validate({ // initialize the plugin
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    firstName: {
+                        required: true
+                    },
+                    lastName: {
+                        required: true
+                    }
                 }
-
+            });
+            function submitEmail(event) {
+                if (!form.valid())
+                    return false;
+                $('#step1').addClass('hidden');
+                $('#step2').removeClass('hidden');
+                $('#step2').fadeIn();
+                event.preventDefault();
                 return false;
             }
 
             $('#proceed2').on('click', function () {
+                if (!$('#walletAddress').val() || !$('#amount').val())
+                    return false;
+
+                var formFields = {
+                    FirstName: $('#FirstName').val(),
+                    LastName: $('#LastName').val(),
+                    WalletAddress: $('#walletAddress').val(),
+                    Email: $('#email').val(),
+                    Nationality: $('#Nationality').val(),
+                    Gender: $("input[name=Gender]:checked").val() === 'Male' ? 1 : 0,
+                    PassportOrNIC: $('#FirstName').val(),
+                    ContributionAmount: $('#amount').val(),
+                    CurrencyType: $("input[name=Currency]:checked").val()
+                };
+                var formData = new FormData();
+                formData.append('data', JSON.stringify(formFields));
+                formData.append('file', $('#userFile')[0].files[0]);
+
                 $('#step2').fadeOut();
                 $('#step2').addClass('hidden');
                 $('#step3').removeClass('hidden');
                 $('#step3').fadeIn();
+                $('#finishButton').attr('disabled', 'disabled');
+
+                setTimeout(function() {
+                    $.ajax({
+                        url: '/api/Contribute',
+                        method: 'POST',
+                        async: false,
+                        cache: false,
+                        contentType: false,
+                        enctype: 'multipart/form-data',
+                        processData: false,
+                        data: formData,
+                        beforeSend: function () {
+
+                        },
+                        success: function (response) {
+                            $('#finalDialog').html('Thank you for your contribution');
+                            $('#finishButton').removeAttr('disabled');
+                        },
+                        error: function (err) {
+                            $('#finalDialog').html('Something went wrong file processing your request.');
+                            $('#finishButton').removeAttr('disabled');
+                        },
+                        complete: function (response) {
+                            setTimeout(function () { window.location.reload(); }, 1500);
+                        }
+                    });
+                }, 1000);
             });
+
+            $('#userFile').on('change', function () {
+                var file = $('#userFile')[0].files[0];
+                $('#fileHolder').val(file.name);
+            });
+
         });
     </script>
+
+
 }

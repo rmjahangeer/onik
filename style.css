@@ -431,6 +431,7 @@ button {
     display: inline;
     float: left;
     width: 100%;
+    padding-top: 50px;
 }
 
 .mu-about-area {
@@ -1904,4 +1905,9 @@ button {
 
 ul.nav-center li.active > a {
     color: white !important;
+}
+
+.requiredLabel:after {
+    content: " *";
+    color: red;
 }
