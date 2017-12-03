@@ -714,10 +714,15 @@
                                 $('#finishButton').removeAttr('disabled');
                             },
                             complete: function (response) {
-                                setTimeout(function () { window.location.reload(); }, 3500);
+                                //setTimeout(function () { window.location.reload(); }, 3500);
                             }
                         });
                     }, 500);
+                });
+
+            $('#finishButton').on('click',
+                function() {
+                    window.location.reload();
                 });
 
             $('#userFile').on('change', function () {
