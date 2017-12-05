@@ -35,6 +35,10 @@
     margin-bottom: 10px;
 }
 
+.mb-40 {
+    margin-bottom: 40px;
+}
+
 .mt-30 {
     margin-top: 30px;
 }
@@ -251,4 +255,21 @@
     color: #fff;
     background-color: #4d59e4;
     border-color: #4d59e4;
+}
+
+.btn.focus.btn-outline, .btn.btn-outline:focus, .btn.btn-outline:hover {
+    color: white !important;
+    background-color: #4d59e4 !important;
+    border-color: #4d59e4;
+    text-decoration: none;
+}
+
+
+.mu-send-msg-btn, .mu-register-btn:hover, .mu-register-btn:focus, .mu-popular-price .mu-register-btn {
+    border: 1px solid #4d59e4;
+    background-color: #4d59e4;
+}
+
+.mu-speakers-slider .slick-next, .mu-speakers-slider .slick-prev, #mu-venue, .mu-popular-price .mu-price-tag, .mu-navbar .navbar-toggle, .mu-navbar .navbar-toggle:hover, .mu-navbar .navbar-toggle:focus, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .mu-schedule-menu li a:hover, .mu-schedule-menu li a:focus, .mu-schedule-menu li.active a, .mu-schedule-menu li.active a:hover, .mu-schedule-menu li.active a:focus {
+    background-color: #4d59e4;
 }
