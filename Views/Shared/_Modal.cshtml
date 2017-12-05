@@ -6,11 +6,33 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">--Timeline here--</h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div style="display:inline-block;width:100%;overflow-y:auto;">
+                            <ul class="timeline timeline-horizontal">
+                                @*<li class="timeline-item">
+                                    <div class="timeline-badge primary">1</div>
+                                </li>*@
+                                <li class="timeline-item 1">
+                                    <div class="timeline-badge multra">1</div>
+                                </li>
+                                <li class="timeline-item 2">
+                                    <div class="timeline-badge multra">2</div>
+                                </li>
+                                <li class="timeline-item 3">
+                                    <div class="timeline-badge multra">3</div>
+                                </li>
+                                <li class="timeline-item 4">
+                                    <div class="timeline-badge multra">4</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="step1" class="modal-body">
                 <h3 class="text-center">Step 1</h3>
-                <h3 class="text-center"><label class="label label-primary">Accept our terms</label></h3>
+                <h3 class="text-center"><label class="label label-multra">Accept our terms</label></h3>
                 <br />
                 <h5 class="text-center">Please read our terms <a class="btn-link" href="http://ito.multra-gmbh.com" target="_blank">here</a></h5>
                 
@@ -56,7 +78,7 @@
                         I have read and agree to the Token Exchange Agreement
                     </label>
                 </div>
-                <button type="submit" id="proceed" class="btn btn-primary btn-block btn-lg">Accept <i class="fa fa-arrow-right"></i></button>
+                <button type="submit" id="proceed" class="btn btn-multra btn-block btn-lg">Accept <i class="fa fa-arrow-right"></i></button>
 
             </div>
             <form class="form-horizontal" id="myform">
@@ -74,9 +96,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <label class="control-label requiredLabel">Email</label>
                             <input required="" placeholder="Your email here..." class="form-control" type="email" name="email" id="email" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label requiredLabel">Phone</label>
+                            <input required="" placeholder="Your Phone here..." class="form-control" type="text" name="phone" id="phone" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -92,31 +118,33 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <label class="control-label requiredLabel">Nationality</label>
                             <input required="" placeholder="Your Nationality here..." class="form-control" type="text" name="Nationality" id="Nationality" />
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <label class="control-label requiredLabel">State of residence</label>
                             <input required="" placeholder="Your State of residence here..." class="form-control" type="text" name="state" id="state" />
                         </div>
                     </div>
-                    <div class="form-group">
+                    @*<div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label requiredLabel">State of residence</label>
+                            <input required="" placeholder="Your State of residence here..." class="form-control" type="text" name="state" id="state" />
+                        </div>
+                    </div>*@
+                    @*<div class="form-group">
                         <div class="col-md-12">
                             <label class="control-label requiredLabel">Phone</label>
                             <input required="" placeholder="Your Phone here..." class="form-control" type="text" name="phone" id="phone" />
                         </div>
-                    </div>
+                    </div>*@
                     <div class="form-group">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <label class="control-label requiredLabel">Passport/ID</label>
                             <input required="" placeholder="Your passport or ID card number here..." class="form-control" type="text" name="nic" id="nic" />
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <label class="control-label">Document (ID/Passport)</label>
                             <input type="file" class="hidden" id="userFile" accept="application/pdf, image/*" />
                             <div class="input-group">
@@ -129,7 +157,21 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" id="proceed2" class="btn btn-primary btn-lg btn-block">Proceed <i class="fa fa-arrow-right"></i></button>
+                    @*<div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label">Document (ID/Passport)</label>
+                            <input type="file" class="hidden" id="userFile" accept="application/pdf, image/*" />
+                            <div class="input-group">
+                                <input type="text" id="fileHolder" readonly="readonly" class="form-control" placeholder="Please upload your passport copy (.jpg, .png, .pdf)">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" onclick="$('#userFile').click()">
+                                        <i class="fa fa-file"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>*@
+                    <button type="submit" id="proceed2" class="btn btn-multra btn-lg btn-block">Proceed <i class="fa fa-arrow-right"></i></button>
 
                 </div>
 
