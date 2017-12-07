@@ -12,15 +12,19 @@
                             <ul class="timeline timeline-horizontal">
                                 <li class="timeline-item 1">
                                     <div class="timeline-badge multra">1</div>
+                                    <div class="sub-text label label-multra">ACCEPT TERMS</div>
                                 </li>
                                 <li class="timeline-item 2">
                                     <div class="timeline-badge multra">2</div>
+                                    <div class="sub-text label label-multra" style="left: 18px">ENTER DATA</div>
                                 </li>
                                 <li class="timeline-item 3">
                                     <div class="timeline-badge multra">3</div>
+                                    <div class="sub-text label label-multra" style="left: 9px">CONTRIBUTION</div>
                                 </li>
                                 <li class="timeline-item 4">
                                     <div class="timeline-badge multra">4</div>
+                                    <div class="sub-text label label-multra" style="left: 20px">BUY TOKEN</div>
                                 </li>
                             </ul>
                         </div>
@@ -31,48 +35,48 @@
                 <h3 class="text-center">Step 1</h3>
                 <h3 class="text-center"><label class="label label-multra">Accept our terms</label></h3>
                 <br />
-                <h5 class="text-center">Please read our terms <a class="btn-link" href="http://ito.multra-gmbh.com" target="_blank">here</a></h5>
-                
+                @*<h5 class="text-center">Please read our terms <a class="btn-link" href="http://ito.multra-gmbh.com" target="_blank">here</a></h5>*@
+
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" value="">
-                        I have read and accept the Participation Guide.
+                        I have read and accept the <a class="btn-link" href="http://ito.multra-gmbh.com" target="_blank">Participation Guide.</a>
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" value="">
-                        I have read and accept the Know Your Customer and Anti-Money Laundering Policy.
+                        I have read and accept the <a class="btn-link" href="http://ito.multra-gmbh.com" target="_blank">KYC and AML Policy.</a>
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" value="">
-                        I have read and agree to the Terms and Conditions. 
+                        I have read and agree to the <a class="btn-link" href="http://ito.multra-gmbh.com" target="_blank">Terms and Conditions.</a>
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" value="">
-                        I have read and agree to the the Token Offer Document.
+                        I have read and agree to the the <a class="btn-link" href="http://ito.multra-gmbh.com" target="_blank">Token Offer Document.</a>
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" value="">
-                        I have read and accept the Risk Factors in Exhibit A
+                        I have read and accept the <a class="btn-link" href="http://ito.multra-gmbh.com" target="_blank">Risk Factors in Exhibit A.</a>
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" value="">
-                        I have read and agree to the General Privacy Policy.
+                        I have read and agree to the <a class="btn-link" href="http://ito.multra-gmbh.com" target="_blank">General Privacy Policy.</a>
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" value="">
-                        I have read and agree to the Token Exchange Agreement
+                        I have read and agree to the <a class="btn-link" href="http://ito.multra-gmbh.com" target="_blank">Token Exchange Agreement.</a>
                     </label>
                 </div>
                 <button type="submit" id="proceed" class="btn btn-multra btn-block btn-lg">Accept <i class="fa fa-arrow-right"></i></button>
@@ -105,7 +109,7 @@
                     <div class="form-group">
                         <div class="col-md-12">
                             <label class="control-label requiredLabel">Gender</label>
-                            <br/>
+                            <br />
                             <label class="radio-inline">
                                 <input checked="checked" type="radio" name="Gender" id="Male" value="Male"> Male
                             </label>
@@ -125,17 +129,17 @@
                         </div>
                     </div>
                     @*<div class="form-group">
-                        <div class="col-md-12">
-                            <label class="control-label requiredLabel">State of residence</label>
-                            <input required="" placeholder="Your State of residence here..." class="form-control" type="text" name="state" id="state" />
-                        </div>
-                    </div>*@
+                            <div class="col-md-12">
+                                <label class="control-label requiredLabel">State of residence</label>
+                                <input required="" placeholder="Your State of residence here..." class="form-control" type="text" name="state" id="state" />
+                            </div>
+                        </div>*@
                     @*<div class="form-group">
-                        <div class="col-md-12">
-                            <label class="control-label requiredLabel">Phone</label>
-                            <input required="" placeholder="Your Phone here..." class="form-control" type="text" name="phone" id="phone" />
-                        </div>
-                    </div>*@
+                            <div class="col-md-12">
+                                <label class="control-label requiredLabel">Phone</label>
+                                <input required="" placeholder="Your Phone here..." class="form-control" type="text" name="phone" id="phone" />
+                            </div>
+                        </div>*@
                     <div class="form-group">
                         <div class="col-md-6">
                             <label class="control-label requiredLabel">Passport/ID</label>
@@ -155,19 +159,19 @@
                         </div>
                     </div>
                     @*<div class="form-group">
-                        <div class="col-md-12">
-                            <label class="control-label">Document (ID/Passport)</label>
-                            <input type="file" class="hidden" id="userFile" accept="application/pdf, image/*" />
-                            <div class="input-group">
-                                <input type="text" id="fileHolder" readonly="readonly" class="form-control" placeholder="Please upload your passport copy (.jpg, .png, .pdf)">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button" onclick="$('#userFile').click()">
-                                        <i class="fa fa-file"></i>
-                                    </button>
-                                </span>
+                            <div class="col-md-12">
+                                <label class="control-label">Document (ID/Passport)</label>
+                                <input type="file" class="hidden" id="userFile" accept="application/pdf, image/*" />
+                                <div class="input-group">
+                                    <input type="text" id="fileHolder" readonly="readonly" class="form-control" placeholder="Please upload your passport copy (.jpg, .png, .pdf)">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button" onclick="$('#userFile').click()">
+                                            <i class="fa fa-file"></i>
+                                        </button>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                    </div>*@
+                        </div>*@
                     <button type="submit" id="proceed2" class="btn btn-multra btn-lg btn-block">Proceed <i class="fa fa-arrow-right"></i></button>
 
                 </div>
@@ -184,13 +188,13 @@
                     <div class="form-group">
                         <div class="col-md-12">
                             <label class="control-label requiredLabel">Currency</label>
-                            <br/>
+                            <br />
                             <label class="radio-inline">
                                 <input checked="checked" required="" type="radio" name="Currency" id="ETH" value="ETH"> ETH
                             </label>
                             @*<label class="radio-inline">
-                                <input required="" type="radio" name="Currency" id="BTC" value="BTC"> BTC
-                            </label>*@
+                                    <input required="" type="radio" name="Currency" id="BTC" value="BTC"> BTC
+                                </label>*@
                         </div>
                     </div>
                     <div class="form-group">
@@ -202,7 +206,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-info btn-lg btn-block" id="proceed3">Next <i class="fa fa-arrow-circle-o-right"></i></button>
+                    <button type="button" class="btn btn-multra btn-lg btn-block" id="proceed3">Next <i class="fa fa-arrow-right"></i></button>
 
                 </div>
             </form>

@@ -52,23 +52,25 @@
                     </button>
 
                     <!-- Logo -->
-                    <!--<a class="navbar-brand hidden" id="nav-brandname" href="@Url.Action("Index", "Home")">
-                        <img src="~/assets/images/logo.png" style="height: 50px"/>
-                    </a>-->
-                    <a class="navbar-brand hidden" id="nav-brandname" href="@Url.Action("Index", "Home")">Pumped</a>
+                    <a class="navbar-brand hidden" id="nav-brandname" href="@Url.Action("Index", "Home")">
+                            <img src="~/assets/images/linline pumped_logo.png" style="height: 28px;vertical-align: middle;margin-top: -3px;" />
+                        </a>
+                    @*<a class="navbar-brand hidden" id="nav-brandname" href="@Url.Action("Index", "Home")">Pumped</a>*@
 
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav mu-menu nav-center">
-                        <li><a href="#mu-hero">Home</a></li>
-                        <li><a href="#mu-about">About Us</a></li>
-                        <li><a href="#mu-video">Portfolio</a></li>
-                        <li><a href="#mu-abouts">Pricing</a></li>
-                        <li><a href="#mu-team">Team</a></li>
-                        <li><a href="#mu-schedule">Blog</a></li>
-                        <li><a href="#mu-contact">Contact</a></li>
+                    <ul class="nav navbar-nav mu-menu">
+                        @*<li><a href="#mu-hero">Home</a></li>*@
+                        <li><a href="#mu-about">TOKEN SALE</a></li>
+                        <li><a href="#mu-video">WHITEPAPER </a></li>
+                        <li><a href="#mu-abouts">PUMPED </a></li>
+                        <li><a href="#mu-aboutsas">MULTRA TOKEN</a></li>
+                        <li><a href="#mu-team">ITO TEAM</a></li>
+                        <li><a href="#mu-prefooter">MULTRA GMBH</a></li>
+                        <li><a href="#mu-contact">CONTACT</a></li>
+                        <li><a href="#" id="nav-mtt">BUY MTT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -178,7 +180,21 @@
     <script type="text/javascript" src="~/assets/js/custom.js"></script>
 
     @RenderSection("scripts", false)
+    <script>
+        $(document).ready(function () {
+            var isAdded = false;
+            $('#nav-mtt').on('click', function () {
 
+                $('[data-target="#mu-hero"]').click();
+                if (!isAdded)
+                    $('body').append('<button id="dynamicBtn" class="hidden" data-toggle="modal" data-target="#myModal"></button>');
+                setTimeout(function () {
+                    $('#dynamicBtn').click();
+                });
+
+            });
+        });
+    </script>
 
 </body>
 </html>
