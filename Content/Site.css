@@ -334,3 +334,22 @@
 .btn-link {
     color: #4d59e4 !important;
 }
+
+#mu-hero .navbar-default .active a {
+     color: white !important; 
+}
+
+div.collapse.navbar-collapse {
+    padding-left: 105px !important;
+}
+
+.subheading-multra {
+    padding-top: 20px;
+    color: white;
+    font-size: 20.5px;
+}
+
+.btn.btn-multra:hover {
+    color: white;
+    background-color: rgb(53, 60, 120)
+}
