@@ -353,3 +353,49 @@ div.collapse.navbar-collapse {
     color: white;
     background-color: rgb(53, 60, 120)
 }
+
+.form-group label.error {
+    display: none !important;
+}
+
+.container-img {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    padding: 15px;
+    transition: .5s ease;
+    background-color: #4d59e4;
+}
+
+.container-img:hover .overlay {
+    opacity: 0.8;
+}
+
+.text {
+    color: white;
+    font-size: 11px;
+    position: relative;
+    top: 50%;
+    vertical-align: middle;
+    left: 50%;
+    bottom: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}

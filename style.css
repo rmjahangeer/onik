@@ -844,7 +844,7 @@ button {
 }
 
 .mu-single-speakers {
-    padding: 0 10px;
+    /*padding: 0 10px;*/
     outline: none;
     text-align: center;
     -webkit-transition: all 0.3s ease 0s;
