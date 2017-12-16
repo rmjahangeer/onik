@@ -89,21 +89,21 @@
                     <div class="form-group">
                         <div class="col-md-6">
                             <label class="control-label requiredLabel">First Name</label>
-                            <input required="" placeholder="Your first name here..." class="form-control" type="text" name="firstName" id="FirstName" />
+                            <input required="" placeholder="Your first name here..." class="form-control input-sm" type="text" name="firstName" id="FirstName" />
                         </div>
                         <div class="col-md-6">
                             <label class="control-label requiredLabel">Last Name</label>
-                            <input required="" placeholder="Your last name here..." class="form-control" type="text" name="lastName" id="LastName" />
+                            <input required="" placeholder="Your last name here..." class="form-control input-sm" type="text" name="lastName" id="LastName" />
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-6">
                             <label class="control-label requiredLabel">Email</label>
-                            <input required="" placeholder="Your email here..." class="form-control" type="email" name="email" id="email" />
+                            <input required="" placeholder="Your email here..." class="form-control input-sm" type="email" name="email" id="email" />
                         </div>
                         <div class="col-md-6">
                             <label class="control-label requiredLabel">Phone</label>
-                            <input required="" placeholder="Your Phone here..." class="form-control" type="text" name="phone" id="phone" />
+                            <input required="" placeholder="Your Phone here..." class="form-control input-sm" type="text" name="phone" id="phone" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -128,18 +128,6 @@
                             <input required="" placeholder="Your State of residence here..." class="form-control input-sm" type="text" name="state" id="state" />
                         </div>
                     </div>
-                    @*<div class="form-group">
-                            <div class="col-md-12">
-                                <label class="control-label requiredLabel">State of residence</label>
-                                <input required="" placeholder="Your State of residence here..." class="form-control" type="text" name="state" id="state" />
-                            </div>
-                        </div>*@
-                    @*<div class="form-group">
-                            <div class="col-md-12">
-                                <label class="control-label requiredLabel">Phone</label>
-                                <input required="" placeholder="Your Phone here..." class="form-control" type="text" name="phone" id="phone" />
-                            </div>
-                        </div>*@
                     <div class="form-group">
                         <div class="col-md-6">
                             <label class="control-label requiredLabel">Passport/ID</label>
@@ -148,7 +136,7 @@
                         <div class="col-md-6">
                             <label class="control-label">Document (ID/Passport)</label>
                             <input type="file" class="hidden" id="userFile" accept="application/pdf, image/*" />
-                            <div class="input-group">
+                            <div class="input-group input-group-sm">
                                 <input type="text" id="fileHolder" readonly="readonly" class="form-control input-sm" placeholder="upload passport copy(.jpg,.png,.pdf)">
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button" onclick="$('#userFile').click()">
@@ -158,20 +146,6 @@
                             </div>
                         </div>
                     </div>
-                    @*<div class="form-group">
-                            <div class="col-md-12">
-                                <label class="control-label">Document (ID/Passport)</label>
-                                <input type="file" class="hidden" id="userFile" accept="application/pdf, image/*" />
-                                <div class="input-group">
-                                    <input type="text" id="fileHolder" readonly="readonly" class="form-control" placeholder="Please upload your passport copy (.jpg, .png, .pdf)">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button" onclick="$('#userFile').click()">
-                                            <i class="fa fa-file"></i>
-                                        </button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>*@
                     <button type="submit" id="proceed2" class="btn btn-multra btn-lg btn-block">Proceed <i class="fa fa-arrow-right"></i></button>
 
                 </div>
@@ -182,7 +156,7 @@
                     <div class="form-group">
                         <div class="col-md-12">
                             <label class="control-label requiredLabel">Your ETH Wallet Adress</label>
-                            <input required="" name="walletAddress" id="walletAddress" placeholder="Your ETH Wallet Adress" class="form-control" type="text" />
+                            <input required="" name="walletAddress" id="walletAddress" placeholder="Your ETH Wallet Adress" class="form-control input-sm" type="text" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -200,9 +174,7 @@
                     <div class="form-group">
                         <div class="col-md-12">
                             <label class="control-label requiredLabel">Amount you want to send</label>
-                            <div class="input-group">
-                                <input type="number" required="" id="amount" name="amount" class="form-control" placeholder="Amount to contribute">
-                            </div>
+                            <input type="number" required="" id="amount" name="amount" class="form-control input-sm" placeholder="Amount to contribute">
                         </div>
                     </div>
                     <button type="button" class="btn btn-multra btn-lg btn-block" id="proceed3">Next <i class="fa fa-arrow-right"></i></button>
