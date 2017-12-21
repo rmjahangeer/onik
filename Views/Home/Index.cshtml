@@ -1,7 +1,7 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutFE.cshtml";
     var db = new Pumped.Models.PumpedEntities();
-    var settings = db.Settings
+    var settings = db.Settings.FirstOrDefault();
 }
 
 <main role="main">
@@ -12,7 +12,7 @@
 
                 <div class="col-md-12 text-center">
                     <h5>
-                        Distributed MulTra Token (MTT) 100000000 (20%) of 500000000 (100%)
+                        Distributed MulTra Token (MTT) @settings.SoldTokens (@((settings.SoldTokens / settings.TotalTokens)*100)% of @settings.TotalTokens (100%)
                     </h5>
                 </div>
                 <div class="col-md-12">
@@ -85,7 +85,7 @@
                                         <tbody>
                                             <tr>
                                                 <td>ITO STRAT DATE</td>
-                                                <td>15.01.2018, 12:00 CET</td>
+                                                <td>15.02.2018, 12:00 CET</td>
                                             </tr>
                                             <tr>
                                                 <td>TOKEN NAME</td>
