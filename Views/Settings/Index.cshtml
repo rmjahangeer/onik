@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @*@Html.ActionLink("Create New", "Create")*@
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -30,6 +30,9 @@
             @Html.DisplayNameFor(model => model.EmailPassword)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.SMTPPort)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.SMTPServer)
         </th>
         <th>
@@ -39,7 +42,7 @@
             @Html.DisplayNameFor(model => model.EmailDisplayName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ShowStartDate)
+            @Html.DisplayNameFor(model => model.EnableSSL)
         </th>
         <th></th>
     </tr>
@@ -65,6 +68,9 @@
             @Html.DisplayFor(modelItem => item.EmailPassword)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.SMTPPort)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.SMTPServer)
         </td>
         <td>
@@ -74,12 +80,12 @@
             @Html.DisplayFor(modelItem => item.EmailDisplayName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ShowStartDate)
+            @Html.DisplayFor(modelItem => item.EnableSSL)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @*@Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }
