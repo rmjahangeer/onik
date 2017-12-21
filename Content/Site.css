@@ -339,8 +339,17 @@
      color: white !important; 
 }
 
-div.collapse.navbar-collapse {
+/*div.collapse.navbar-collapse {
     padding-left: 105px !important;
+}*/
+
+div.navbar-collapse.collapse.in {
+    background-color: white;
+    color: black;
+}
+
+div.navbar-collapse.collapse.in a {
+    color: black !important;
 }
 
 .subheading-multra {

@@ -1911,3 +1911,14 @@ ul.nav-center li.active > a {
     content: " *";
     color: red;
 }
+
+.progress .labels {
+    position: absolute;
+    /* bottom: -18px; */
+    left: 0px;
+    top: 55px;
+}
+
+.progress .separator {
+    width: 2px; height: 49px; background: #5966e6; position: absolute; top: 6px;
+}
