@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="5e54de4814ff4b50b5af49d343b72751" Name="Diagram1" >
         <EntityTypeShape EntityType="PumpedModel.ContibutionUser" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PumpedModel.Setting" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

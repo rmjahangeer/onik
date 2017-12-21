@@ -1,4 +1,10 @@
-﻿<main role="main">
+﻿@{
+    Layout = "~/Views/Shared/_LayoutFE.cshtml";
+    var db = new Pumped.Models.PumpedEntities();
+    var settings = db.Settings
+}
+
+<main role="main">
     <!-- Start About -->
     <section id="mu-about" style="margin-top: 20px">
         <div class="container-fluid" style="padding: 0">
