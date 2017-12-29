@@ -554,6 +554,10 @@ div.navbar-collapse.collapse.in {
     .timeline-horizontal .timeline-item {
         min-width: 75px;
     }
+
+    #books {
+        height: 200px;
+    }
 }
 
 
