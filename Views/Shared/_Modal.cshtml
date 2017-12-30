@@ -33,7 +33,7 @@
             </div>
             <div id="step1" class="modal-body">
                 <h3 class="text-center">Step 1</h3>
-                <h3 class="text-center"><label class="label label-multra">Accept our terms</label></h3>
+                <h3 class="text-center"><label class="label label-multra">Accept terms</label></h3>
                 <br />
                 @*<h5 class="text-center">Please read our terms <a class="btn-link" href="http://ito.multra-gmbh.com" target="_blank">here</a></h5>*@
 
@@ -85,7 +85,7 @@
             <form class="form-horizontal" id="myform">
                 <div id="step2" class="modal-body hidden">
                     <h3 class="text-center">Step 2</h3>
-
+                    <h3 class="text-center"><label class="label label-multra">Enter Data</label></h3>
                     <div class="form-group">
                         <div class="col-md-6">
                             <label class="control-label requiredLabel">First Name</label>
@@ -149,10 +149,11 @@
                     <button type="submit" id="proceed2" class="btn btn-multra btn-lg btn-block">Proceed <i class="fa fa-arrow-right"></i></button>
 
                 </div>
-
+            </form>
+            <form class="form-horizontal" id="form2">
                 <div id="step3" class="modal-body hidden">
                     <h3 class="text-center">Step 3</h3>
-
+                    <h3 class="text-center"><label class="label label-multra">Contribution</label></h3>
                     <div class="form-group">
                         <div class="col-md-12">
                             <label class="control-label requiredLabel">Your ETH Wallet Adress</label>
@@ -167,8 +168,8 @@
                                 <input checked="checked" required="" type="radio" name="Currency" id="ETH" value="ETH"> ETH
                             </label>
                             @*<label class="radio-inline">
-                                    <input required="" type="radio" name="Currency" id="BTC" value="BTC"> BTC
-                                </label>*@
+                            <input required="" type="radio" name="Currency" id="BTC" value="BTC"> BTC
+                        </label>*@
                         </div>
                     </div>
                     <div class="form-group">
@@ -181,13 +182,13 @@
 
                 </div>
             </form>
-            <div id="step4" class="modal-body hidden">
-                <h4 class="text-center" id="finalDialog">Please wait... Processing</h4>
-                <div class="text-center">
-                    <button type="submit" id="finishButton" class="btn btn-success btn-lg btn-block" data-dismiss="modal">Finish <i class="fa fa-arrow-up"></i></button>
+                <div id="step4" class="modal-body hidden">
+                    <h4 class="text-center" id="finalDialog">Please wait... Processing</h4>
+                    <div class="text-center">
+                        <button type="submit" id="finishButton" class="btn btn-success btn-lg btn-block" data-dismiss="modal">Finish <i class="fa fa-arrow-up"></i></button>
+                    </div>
                 </div>
-            </div>
-        </div>
+</div>
 
     </div>
 </div>

@@ -487,6 +487,25 @@ div.navbar-collapse.collapse.in {
     bottom: 50px;
 }
 
+#footer_logo {
+    width: 270px !important;
+}
+
+.mb-0 {
+    margin-bottom: 0px !important;   
+}
+
+.mu-single-speakers .overlay .text a {
+    text-decoration: underline;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.mu-single-speakers .overlay .text a:hover {
+    color: #4d59e4 !important;
+}
+
+
 @media (max-width: 414px) {
     .mu-event-counter-block-down {
         margin: 0 0;
