@@ -8,8 +8,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pumped curates well investigated news from trustworthy sources eliminating fake news. By purchasing MulTra Token in the ITO Participants become part of a community of society architects to design a decentralized economy for content monetization which is respectful of consumer choice, impactful for advertisers, sustainable for publishers and effective at scale."/>
+    <meta name="og:description" content="Pumped curates well investigated news from trustworthy sources eliminating fake news. By purchasing MulTra Token in the ITO Participants become part of a community of society architects to design a decentralized economy for content monetization which is respectful of consumer choice, impactful for advertisers, sustainable for publishers and effective at scale."/>
+    <meta name="keywords" content="vitalik buterin ico, multra token, multra ito, token sale, pumped, pumped crypto, 
+          online conetnt monetization, initial coin offering, ico, ito, blokchain, ethereum, ether, eth, bitcoin, btc, crypto currency, trading, coins, 
+          trading coins, buy bitcoin, buy crypto currency, buy ethereum, blockchain project, vitalik burin blockchain, 
+          richard thaler, nudge, nudge theory, behavioural economics, multra gmbh, german ico" />
+    <meta property="og:url" content="http://pumped-crypto.io/" />
+    <meta property="og:image:width" content="1018" />
+    <meta property="og:image:height" content="450" />
+    <meta property="og:image" content="@(Request.Url.Host)/assets/images/pumped_site_image.png" />
+    <meta property="articlePublisher" content="https://www.facebook.com/pumpedcrypto/" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Pumped</title>
+    <title>Pumped Crypto ITO | MulTra Token Sale</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="~/favicon_pumped.ico" />
     <!-- Font Awesome -->
@@ -96,13 +107,16 @@
                         </div>
                         <!-- End center Logo -->
 
-                        <div class="mu-hero-featured-content" style="margin-top: 0px">
+                        <div class="mu-hero-featured-content">
 
-                            <h5 style="color: white; font-size: 13px">EMPOWERING CONTENT | REWARDING CURATORS</h5>
-                            <h1 style="font-size: xx-large">
+                            <h5 class="hidden-sm hidden-xs" style="color: white; font-size: 13px">EMPOWERING CONTENT | REWARDING CURATORS</h5>
+                            <h1 class="hidden-sm hidden-xs" style="font-size: xx-large">
                                 <strong>MULTRA TOKEN SALE</strong>
                             </h1>
-                            <p class="text-uppercase subheading-multra">@settings.TextLine</p>
+                            <p class="text-uppercase subheading-multra">
+                                <span class="hidden-sm hidden-xs">@settings.TextLine.Substring(0, 7) </span> 
+                                <span class="hidden-md hidden-lg">MulTra</span> @settings.TextLine.Substring(8)
+                            </p>
                             <div class="mu-event-counter-area" style="margin-bottom: 30px">
                                 <input type="hidden" id="timer" value="@settings.TimerDate.ToString("yyyy/M/dd")"/>
                                 <div id="mu-event-counter">

@@ -7,7 +7,7 @@
 
 <main role="main">
     <!-- Start About -->
-    <section id="mu-about" style="margin-top: 20px">
+    <section id="mu-about">
         <div class="moon">
             <img src="~/assets/images/moon.png" />
         </div>
@@ -16,7 +16,7 @@
 
                 <div class="col-md-12 text-center">
                     <h5>
-                        Distributed MulTra Token (MTT) @settings.SoldTokens (@soldPercentage%) of @settings.TotalTokens (100%)
+                        Distributed MulTra Token<span class="hidden-sm hidden-xs"> (MTT) @settings.SoldTokens (@soldPercentage%) of @settings.TotalTokens (100%)</span>
                     </h5>
                 </div>
                 <div class="col-md-12">
@@ -55,7 +55,7 @@
 
                                 <div class="progress-bar gradient" role="progressbar" aria-valuenow="@soldPercentage"
                                      aria-valuemin="0" aria-valuemax="100" style="width: @soldPercentage%">
-                                    <span class="sr-only">@soldPercentage% Complete</span>
+                                    <span class="hidden-lg hidden-md">@soldPercentage% Sold</span>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                                         <tbody>
                                             <tr>
                                                 <td>ITO STRAT DATE</td>
-                                                <td>15.02.2018, 12:00 CET</td>
+                                                <td>19.02.2018, 15:00 CET</td>
                                             </tr>
                                             <tr>
                                                 <td>TOKEN NAME</td>
@@ -107,23 +107,24 @@
                                             <tr>
                                                 <td class="text-uppercase">
                                                     Exchange Rate<br>
-                                                    <small>(for first 200 million MTT)</small>
+                                                    <small>(<span class="hidden-xs hidden-sm">for </span>first 200 
+                                                        <span class="hidden-sm hidden-xs">million</span> <span class="hidden-md hidden-lg">M</span> <span class="hidden-xs hidden-sm">MTT</span>)</small>
                                                 </td>
                                                 <td>1ETH / 4000 MTT</td>
                                             </tr>
                                             <tr>
                                                 <td class="text-uppercase">
                                                     Exchange Rate<br>
-                                                    <small>(for remaining 300 million MTT)</small>
+                                                    <small>(<span class="hidden-xs hidden-sm">for </span>remaining 300 <span class="hidden-sm hidden-xs">million</span> <span class="hidden-md hidden-lg">M</span> <span class="hidden-xs hidden-sm">MTT</span>)</small>
                                                 </td>
                                                 <td>1ETH / 2000 MTT</td>
                                             </tr>
                                             <tr>
-                                                <td>MAX. CROWDSALE CAP</td>
+                                                <td><span class="hidden-xs hidden-sm">MAX. </span>CROWDSALE CAP</td>
                                                 <td>200k ETH / 500m MTT</td>
                                             </tr>
                                             <tr>
-                                                <td>ACCEPTED EQUIVALENTS</td>
+                                                <td>ACCEPTED <span class="hidden-xs hidden-sm">EQUIVALENTS</span></td>
                                                 <td>ETH</td>
                                             </tr>
                                             <tr>
@@ -879,11 +880,11 @@
             <div class="row">
                 <div class="col-md-5">
 
-                    <img style="height: 300px" src="~/assets/images/economy-bird.png" />
+                    <img id="birdImg" style="" src="~/assets/images/economy-bird.png" />
                 </div>
                 <div class="col-md-6" style="padding-right: 5px;">
 
-                    <img style="height: 300px; float: right" src="~/assets/images/economy-graph.png" />
+                    <img id="graphImage" style="" src="~/assets/images/economy-graph.png" />
                 </div>
             </div>
         </div>
@@ -1232,6 +1233,14 @@
             $('#userFile').on('change', function () {
                 var file = $('#userFile')[0].files[0];
                 $('#fileHolder').val(file.name);
+            });
+
+            $('[data-target="#bs-example-navbar-collapse-1"]').on('click', function() {
+                if (!$('.mu-navbar').hasClass('nav-bar-solid')) {
+                    $('.mu-navbar').toggleClass('nav-bar-solid');
+                    $('#nav-brandname').toggleClass('hidden');
+                }
+                
             });
         });
     </script>

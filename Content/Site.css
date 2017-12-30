@@ -505,6 +505,38 @@ div.navbar-collapse.collapse.in {
     color: #4d59e4 !important;
 }
 
+.mu-hero-featured-content {
+    margin-top: 0px;
+}
+
+.progress-bar.gradient span {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #031cff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+#mu-about {
+    margin-top: 20px;
+}
+
+p.text-justify {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+#birdImg {
+    height: 300px
+}
+
+#graphImage {
+    height: 300px;
+    float: right
+}
 
 @media (max-width: 414px) {
     .mu-event-counter-block-down {
@@ -517,7 +549,8 @@ div.navbar-collapse.collapse.in {
 
     .headerButtons {
         position: relative;
-        bottom: 300px !important;
+        bottom: 330px !important;
+        margin-left: -2px;
     }
 
     #mu-event-counter span.mu-event-counter-block-down.i2 {
@@ -559,11 +592,11 @@ div.navbar-collapse.collapse.in {
     }
 
     #mu-about-simple img {
-        height: 360px !important;
+        height: 255px !important;
     }
 
     .mu-single-speakers .overlay .text {
-        font-size: 16px !important;
+        font-size: 14px !important;
     }
 
     .timeline-item .sub-text {
@@ -577,6 +610,73 @@ div.navbar-collapse.collapse.in {
     #books {
         height: 200px;
     }
+
+    .mu-event-counter-area {
+        margin-left: 13px !important;
+    }
+
+    .mu-hero-featured-content {
+        margin-top: -25px;
+    }
+
+    .navbar-nav > li {
+        float: none;
+        display: block;
+    }
+
+    .navbar-nav {
+        text-align: left
+    }
+
+    .mu-logo img {
+        height: 190px;
+    }
+
+    .subheading-multra {
+        padding-top: 0px;
+    }
+
+    .mu-hero-featured-area {
+        padding-top: 30px !important
+    }
+
+    #mu-about h5 {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        width: 82%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-left: 32px;
+    }
+
+    .mt-30 {
+        margin-top: 50px !important;
+    }
+
+    #mu-about {
+        padding-top: 90px !important;
+    }
+
+    .mu-video-iframe-area {
+        padding: 50% 5% !important;
+    }
+
+    #birdImg {
+        height: 190px !important
+    }
+
+    #graphImage {
+        height: 240px !important;
+        float: right
+    }
+
+    #mu-schedule {
+        height: 1400px;
+    }
 }
+
+
 
 
