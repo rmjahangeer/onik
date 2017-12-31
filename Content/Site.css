@@ -549,18 +549,18 @@ p.text-justify {
 
     .headerButtons {
         position: relative;
-        bottom: 330px !important;
+        bottom: 365px !important;
         margin-left: -2px;
     }
 
     #mu-event-counter span.mu-event-counter-block-down.i2 {
         position: relative;
-        bottom: 140px;
+        bottom: 165px;
     }
     
     #mu-event-counter span.mu-event-counter-block-up.i2 {
         position: relative;
-        bottom: 280px;
+        bottom: 310px;
     }
 
     .tabelArea {
@@ -601,6 +601,19 @@ p.text-justify {
 
     .timeline-item .sub-text {
         font-size: 8px !important;
+        left: 5px;
+    }
+    
+    .timeline-item .label2 {
+        left: 10px;
+    }
+    
+    .timeline-item .label3 {
+        left: 5px !important;
+    }
+    
+    .timeline-item .label4 {
+        left: 13px !important;
     }
 
     .timeline-horizontal .timeline-item {
@@ -637,7 +650,7 @@ p.text-justify {
     }
 
     .mu-hero-featured-area {
-        padding-top: 30px !important
+        padding-top: 0px !important
     }
 
     #mu-about h5 {
@@ -675,6 +688,19 @@ p.text-justify {
     #mu-schedule {
         height: 1400px;
     }
+
+    .multra-heading {
+        margin-right: 15px;
+    }
+
+    .subheading-multra {
+        font-size: 17px !important;
+        margin-top: -2px !important;
+    }
+
+    /*.checkbox label {
+        font-size: 12px;
+    }*/
 }
 
 
