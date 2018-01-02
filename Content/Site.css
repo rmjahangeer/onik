@@ -538,6 +538,11 @@ p.text-justify {
     float: right
 }
 
+
+#mobileImg {
+    height: 550px;
+}
+
 @media (max-width: 414px) {
     .mu-event-counter-block-down {
         margin: 0 0;
@@ -701,6 +706,12 @@ p.text-justify {
     /*.checkbox label {
         font-size: 12px;
     }*/
+
+    
+    #mobileImg {
+        height: auto !important;
+    }
+
 }
 
 
