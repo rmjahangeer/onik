@@ -2,7 +2,8 @@
     Layout = "~/Views/Shared/_LayoutFE.cshtml";
     var db = new Pumped.Models.PumpedEntities();
     var settings = db.Settings.FirstOrDefault();
-    var soldPercentage = Math.Round(Convert.ToDecimal(settings.SoldTokens) / Convert.ToDecimal(settings.TotalTokens), 1) * 100;
+    var calVal = ((Convert.ToDecimal(settings.SoldTokens) / Convert.ToDecimal(settings.TotalTokens)) * 100);
+    var soldPercentage = calVal > 1 ? calVal.ToString("F1") : calVal.ToString("0.000000").TrimEnd('0');
 }
 
 <main role="main">
@@ -16,7 +17,7 @@
 
                 <div class="col-md-12 text-center">
                     <h5>
-                        Distributed MulTra Token<span class="hidden-sm hidden-xs"> (MTT) @settings.SoldTokens (@soldPercentage%) of @settings.TotalTokens (100%)</span>
+                        Distributed MulTra Token<span class="hidden-sm hidden-xs"> (MTT) @settings.SoldTokens (@soldPercentage.ToString().Replace(",",".")%) of @settings.TotalTokens (100%)</span>
                     </h5>
                 </div>
                 <div class="col-md-12">
@@ -53,9 +54,9 @@
                                     <div class="labels" style="left: 95%;">500 M</div>
                                 </div>
 
-                                <div class="progress-bar gradient" role="progressbar" aria-valuenow="@soldPercentage"
-                                     aria-valuemin="0" aria-valuemax="100" style="width: @soldPercentage%">
-                                    <span class="hidden-lg hidden-md">@soldPercentage% Sold</span>
+                                <div class="progress-bar gradient" role="progressbar" aria-valuenow="@soldPercentage.ToString().Replace(",",".")"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: @soldPercentage.ToString().Replace(",",".")%">
+                                    <span class="hidden-lg hidden-md">@soldPercentage.ToString().Replace(",", ".")% Sold</span>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +64,7 @@
                     <br>
                     <div class="row mt-30">
                         <div class="col-md-6 col-sm-6 col-xs-6">
-                            <a href="http://whitepaper.multra-gmbh.com" target="_blank" class="btn btn-multra text-uppercase pull-right btn-lg">Whitepaper</a>
+                            <a href="http://www.multra-gmbh.com/files/Pumped-Whitepaper.pdf" target="_blank" class="btn btn-multra text-uppercase pull-right btn-lg">Whitepaper</a>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6">
                             <button data-toggle="modal" data-target="#myModal" class="btn btn-multra btn-lg text-uppercase pull-left">Participate</button>
@@ -1193,7 +1194,7 @@
                     $('#step4').fadeIn();
                     $('ul.timeline.timeline-horizontal .timeline-item.4 div').addClass('active');
                     $('#finishButton').attr('disabled', 'disabled');
-
+                    $('button.close').hide();
                     setTimeout(function () {
                         $.ajax({
                             url: '/api/Contribute',

@@ -1,0 +1,133 @@
+﻿@model IEnumerable<Pumped.Models.ContibutionUser>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table id="users" class="table table-responsive table-hover">
+    <thead>
+        <tr>
+            <th>
+                F Name
+            </th>
+            <th>
+                L Name
+            </th>
+            <th>
+                Wallet
+            </th>
+            <th>
+                Attachment
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nationality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                Passport/NIC
+            </th>
+            <th>
+                Amount
+            </th>
+            <th>
+                Currency
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>Ip Address</th>
+            <th>Time Stamp</th>
+            @*<th></th>*@
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WalletAddress)
+                </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.IdentityDocFile))
+                {
+                        <a href="@item.IdentityDocFile" target="_blank">Download</a>
+                    }
+                    else
+                    {
+                        <span>No Attachment</span>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nationality)
+                </td>
+                <td>
+                    @if (item.Gender)
+                {
+                        <span>male</span>
+                    }
+                    else
+                    {
+                        <span>female</span>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PassportOrNIC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContributionAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrencyType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.State)
+                </td>
+                <td>@item.IPAddress</td>
+                <td>@item.CreatedOn.Value.ToString("MM/dd/yyyy h:mm:ss tt")</td>
+                @*<td>*@
+                    @*@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id=item.Id }) |*@
+                    @*@Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+                @*</td>*@
+            </tr>
+        }
+    </tbody>
+
+</table>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('#users').dataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+        });
+    </script>
+}

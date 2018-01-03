@@ -1,0 +1,129 @@
+﻿@model Pumped.Models.ContibutionUser
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ContibutionUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WalletAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WalletAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentityDocFile)
+        </dt>
+
+        <dd>
+            @if (!string.IsNullOrEmpty(Model.IdentityDocFile))
+            {
+                <a href="@Model.IdentityDocFile" target="_blank">Download attachment</a>
+            }
+            else
+            {
+                <span>No Attachment</span>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @if (Model.Gender)
+            {
+                <span>male</span>
+            }
+            else
+            {
+                <span>female</span>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassportOrNIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassportOrNIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContributionAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContributionAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrencyType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrencyType)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

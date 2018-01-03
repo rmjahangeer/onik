@@ -33,8 +33,8 @@
     <link id="switcher" href="~/assets/css/theme-color/jelly-bean-theme.css" rel="stylesheet">
 
     <!-- Main Style -->
-    <link href="~/style.css" rel="stylesheet">
-    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/style.css?v=v=@(new Random().Next( int.MinValue, int.MaxValue ))" rel="stylesheet">
+    <link href="~/Content/Site.css?v=@(new Random().Next( int.MinValue, int.MaxValue ))" rel="stylesheet" />
     <!-- Fonts -->
     <!-- Open Sans for body font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
@@ -79,8 +79,8 @@
                     <ul class="nav navbar-nav mu-menu">
                         @*<li><a href="#mu-hero">Home</a></li>*@
                         <li><a href="#mu-about">TOKEN SALE</a></li>
-                        <li><a target="_blank" href="http://whitepaper.multra-gmbh.com">WHITEPAPER </a></li>
-                        <li><a target="_blank" href="http://itoguide.multra-gmbh.com">ITO GUIDE </a></li>
+                        <li><a target="_blank" href="http://www.multra-gmbh.com/files/Pumped-Whitepaper.pdf">WHITEPAPER </a></li>
+                        <li><a target="_blank" href="http://www.multra-gmbh.com/files/Pumped-MTT-Token-Offer.pdf">ITO GUIDE </a></li>
                         <li><a href="#mu-about-simple">MULTRA TOKEN</a></li>
                         <li><a href="#mu-team">ITO TEAM</a></li>
                         <li><a href="#mu-prefooter">MULTRA GMBH</a></li>
@@ -118,7 +118,7 @@
                                 <span class="hidden-md hidden-lg">MulTra</span> @settings.TextLine.Substring(8)
                             </p>
                             <div class="mu-event-counter-area" style="margin-bottom: 30px">
-                                <input type="hidden" id="timer" value="@settings.TimerDate.ToString("yyyy/M/dd")"/>
+                                <input type="hidden" id="timer" value="@settings.TimerDate.ToString("yyyy/M/dd").Replace(".", "/")"/>
                                 <div id="mu-event-counter">
                                     <span class="mu-event-counter-block-down i1">
                                         <span style="position: relative;bottom: 162px;right: 20px;    font-size: 35px;">24</span>
@@ -140,7 +140,7 @@
                             </div>
                             <div class="row headerButtons">
                                 <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <a href="http://whitepaper.multra-gmbh.com" target="_blank" class="btn btn-outline text-uppercase pull-right btn-lg">Whitepaper</a>
+                                    <a href="http://www.multra-gmbh.com/files/Pumped-Whitepaper.pdf" target="_blank" class="btn btn-outline text-uppercase pull-right btn-lg">Whitepaper</a>
                                 </div>
                                 <br />
                                 <div class="col-md-6 col-sm-6 col-xs-6">
@@ -178,7 +178,7 @@
 
 
     <!-- Custom js -->
-    <script type="text/javascript" src="~/assets/js/custom.js"></script>
+    <script type="text/javascript" src="~/assets/js/custom.js?v=v=@(new Random().Next( int.MinValue, int.MaxValue ))"></script>
 
     @RenderSection("scripts", false)
     <script>

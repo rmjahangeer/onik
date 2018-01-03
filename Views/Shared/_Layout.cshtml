@@ -6,6 +6,11 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="~/Content/DataTables/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="~/Content/DataTables/css/buttons.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/DataTables/css/buttons.foundation.min.css" rel="stylesheet" />
+    <link href="~/Content/DataTables/css/buttons.jqueryui.min.css" rel="stylesheet" />
 </head>
 <body style="padding-top: 65px;">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -16,7 +21,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Pumped Admin", "Index", "Admin", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -26,7 +31,7 @@
                     {
                         <li>
                             <form method="post" action="@Url.Action("LogOff", "Account")" id="logout" style="display: none">
-                            @Html.AntiForgeryToken()
+                                @Html.AntiForgeryToken()
                             </form>
                             <a href="#" onclick="$('#logout').submit()">Logout</a>
                         </li>
@@ -45,6 +50,16 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/DataTables/jquery.dataTables.js"></script>
+    <script src="~/Scripts/DataTables/dataTables.responsive.js"></script>
+    <script src="~/Scripts/DataTables/dataTables.buttons.min.js"></script>
+    <script src="~/Scripts/DataTables/buttons.bootstrap.min.js"></script>
+    <script src="~/Scripts/DataTables/buttons.colVis.min.js"></script>
+    <script src="~/Scripts/DataTables/buttons.flash.min.js"></script>
+    <script src="~/Scripts/DataTables/buttons.foundation.min.js"></script>
+    <script src="~/Scripts/DataTables/buttons.html5.min.js"></script>
+    <script src="~/Scripts/DataTables/buttons.jqueryui.min.js"></script>
+    <script src="~/Scripts/DataTables/buttons.print.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
