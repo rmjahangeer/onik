@@ -110,6 +110,7 @@ img {
 
 code {
     background-color: #ee6e73;
+    -ms-border-radius: 2px;
     border-radius: 2px;
     color: #fff;
     padding: 2px 4px;
@@ -118,11 +119,12 @@ code {
 pre {
     background-color: #f8f8f8;
     border: 1px solid #eee;
+    -ms-border-radius: 4px;
     border-radius: 4px;
     padding: 10px;
 }
 
-    pre code {
+pre code {
         background-color: transparent;
         color: #333;
     }
@@ -134,6 +136,7 @@ del {
 kbd {
     background-color: #ddd;
     padding: 4px 6px;
+    -ms-border-radius: 2px;
     border-radius: 2px;
     color:;
 }
@@ -153,11 +156,12 @@ dl dd {
 
 blockquote {
     background-color: #f8f8f8;
+    -ms-border-radius: 0 4px 4px 0;
     border-radius: 0 4px 4px 0;
     padding: 5px 15px;
 }
 
-    blockquote p {
+blockquote p {
         margin-top: 10px;
     }
 
@@ -176,6 +180,7 @@ button {
 
 .mu-primary-btn {
     background-color: transparent;
+    -ms-border-radius: 4px;
     border-radius: 4px;
     border: 2px solid #ffffff;
     color: #fff;
@@ -185,10 +190,12 @@ button {
     letter-spacing: 1.5px;
     padding: 12px 35px;
     -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
-    .mu-primary-btn:hover,
+.mu-primary-btn:hover,
     .mu-primary-btn:focus {
         background-color: #fff;
     }
@@ -202,13 +209,16 @@ button {
     padding: 14px 24px;
     margin-top: 10px;
     -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
     width: 250px;
     color: #fff;
+    -ms-border-radius: 5px;
     border-radius: 5px;
 }
 
-    .mu-send-msg-btn:hover,
+.mu-send-msg-btn:hover,
     .mu-send-msg-btn:focus {
         background-color: #fff;
     }
@@ -224,15 +234,18 @@ button {
     display: inline;
     float: left;
     width: 100%;
+    -ms-background-position: center center;
     background-position: center center;
     /*background-attachment: fixed;*/
     -webkit-background-size: cover;
+    -ms-background-size: cover;
     background-size: cover;
 }
 
 .mu-hero-overlay {
     display: inline;
     float: left;
+    -ms-opacity: 0.94;
     opacity: 0.94;
     width: 100%;
 }
@@ -270,10 +283,11 @@ button {
     z-index: 999;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
     transition: all 0.5s;
 }
 
-    .mu-menu-btn:hover,
+.mu-menu-btn:hover,
     .mu-menu-btn:focus {
         border: 2px solid #fff;
     }
@@ -393,6 +407,9 @@ button {
 .mu-navbar {
     /*top: -150px;*/
     top: 0;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -410,6 +427,7 @@ button {
     color: #333;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -479,9 +497,12 @@ button {
 
 #mu-video {
     background-image: url("assets/images/about-video-bg.png");
+    -ms-background-attachment: fixed;
     background-attachment: fixed;
+    -ms-background-position: center center;
     background-position: center center;
     -webkit-background-size: cover;
+    -ms-background-size: cover;
     background-size: cover;
     display: inline;
     float: left;
@@ -490,9 +511,12 @@ button {
 
 #mu-video-playlist {
     background-image: url("assets/images/pumped-economy.png");
+    -ms-background-attachment: fixed;
     background-attachment: fixed;
+    -ms-background-position: center center;
     background-position: center center;
     -webkit-background-size: cover;
+    -ms-background-size: cover;
     background-size: cover;
     display: inline;
     float: left;
@@ -502,9 +526,12 @@ button {
 
 #mu-abouts {
     background-image: url("assets/images/silverbg.png");
+    -ms-background-attachment: fixed;
     background-attachment: fixed;
+    -ms-background-position: center center;
     background-position: center center;
     -webkit-background-size: cover;
+    -ms-background-size: cover;
     background-size: cover;
     display: inline;
     float: left;
@@ -513,9 +540,12 @@ button {
 
 #mu-about-panther {
     background-image: url("assets/images/8.png");
+    -ms-background-attachment: fixed;
     background-attachment: fixed;
+    -ms-background-position: center center;
     background-position: center center;
     -webkit-background-size: cover;
+    -ms-background-size: cover;
     background-size: cover;
     display: inline;
     float: left;
@@ -526,9 +556,12 @@ button {
 #mu-about-simple {
     /*background-image: ;*/
     background: transparent;
+    -ms-background-attachment: fixed;
     background-attachment: fixed;
+    -ms-background-position: center center;
     background-position: center center;
     -webkit-background-size: cover;
+    -ms-background-size: cover;
     background-size: cover;
     display: inline;
     float: left;
@@ -538,9 +571,12 @@ button {
 
 #mu-economy {
     background: #d8d8d8;
+    -ms-background-attachment: fixed;
     background-attachment: fixed;
+    -ms-background-position: center center;
     background-position: center center;
     -webkit-background-size: cover;
+    -ms-background-size: cover;
     background-size: cover;
     display: inline;
     float: left;
@@ -550,9 +586,12 @@ button {
 
 #mu-prefooter {
     background-image: url("assets/images/head-featured-bg.png");
+    -ms-background-attachment: fixed;
     background-attachment: fixed;
+    -ms-background-position: center center;
     background-position: center center;
     -webkit-background-size: cover;
+    -ms-background-size: cover;
     background-size: cover;
     display: inline;
     float: left;
@@ -577,6 +616,7 @@ button {
 .mu-video-overlay {
     display: inline;
     float: left;
+    -ms-opacity: 0.85;
     opacity: 0.85;
     width: 100%;
 }
@@ -605,6 +645,7 @@ button {
     color: #fff;
     font-size: 22px;
     border: 2px solid #fff;
+    -ms-border-radius: 50%;
     border-radius: 50%;
     width: 60px;
     display: inline-block;
@@ -614,17 +655,20 @@ button {
     margin-top: 100px;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
     transition: all 0.5s;
 }
 
-    .mu-video-play-btn:hover,
+.mu-video-play-btn:hover,
     .mu-video-play-btn:focus {
-        color: #fff;
+    color: #fff;
         -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-    }
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
 
 .mu-video-close-btn {
+    -ms-border-radius: 50%;
     border-radius: 50%;
     color: #fff;
     font-size: 18px;
@@ -639,18 +683,21 @@ button {
     margin-top: 30px;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
     transition: all 0.5s;
     width: 50px;
 }
 
-    .mu-video-close-btn:hover,
+.mu-video-close-btn:hover,
     .mu-video-close-btn:focus {
-        color: #fff;
+    color: #fff;
         -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-    }
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
 
 .mu-video-iframe-area {
+    background-color: #000000;
     background-color: rgba(0,0,0,0.84);
     position: fixed;
     top: 0;
@@ -665,6 +712,7 @@ button {
     display: none;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -713,14 +761,16 @@ button {
     }
 
         .mu-schedule-menu li a {
+            -ms-border-radius: 0;
             border-radius: 0;
             margin: 0 10px;
             -webkit-transition: all 0.5s;
             -o-transition: all 0.5s;
+            -ms-transition: all 0.5s;
             transition: all 0.5s;
         }
 
-            .mu-schedule-menu li a:hover,
+.mu-schedule-menu li a:hover,
             .mu-schedule-menu li a:focus,
             .mu-schedule-menu li.active a,
             .mu-schedule-menu li.active a:hover,
@@ -741,35 +791,42 @@ button {
     background-color: #ddd;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
     transition: all 0.5s;
 }
 
-    .mu-event-timeline ul li::after {
-        content: '';
+.mu-event-timeline ul li:after {
+    content: '';
         position: absolute;
         left: 50%;
         top: 70px;
-        transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
         height: 24px;
         width: 24px;
-        border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
         background: inherit;
-    }
+}
 
 
-    .mu-event-timeline ul li .mu-single-event {
-        background-color: #fff;
-        -webkit-box-shadow: 0 0 16px 0 rgba(32,32,47,0.16);
-        -moz-box-shadow: 0 0 16px 0 rgba(32,32,47,0.16);
-        box-shadow: 0 0 16px 0 rgba(32,32,47,0.16);
+.mu-event-timeline ul li .mu-single-event {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 16px 0 #20202f;
+    -webkit-box-shadow: 0 0 16px 0 rgba(32,32,47,0.16);
+    -moz-box-shadow: 0 0 16px 0 #20202f;
+    -moz-box-shadow: 0 0 16px 0 rgba(32,32,47,0.16);
+    box-shadow: 0 0 16px 0 #20202f;
+    box-shadow: 0 0 16px 0 rgba(32,32,47,0.16);
         position: relative;
         top: 0;
         width: 400px;
         padding: 15px;
         text-align: left;
-    }
+}
 
-    .mu-event-timeline ul li:nth-child(2n) .mu-single-event {
+.mu-event-timeline ul li:nth-child(2n) .mu-single-event {
         left: 50px;
     }
 
@@ -782,11 +839,12 @@ button {
         height: 80px;
         width: 80px;
         float: left;
+        -ms-border-radius: 50%;
         border-radius: 50%;
         margin-right: 15px;
     }
 
-    .mu-event-timeline ul li:nth-child(2n+1) .mu-single-event img {
+.mu-event-timeline ul li:nth-child(2n+1) .mu-single-event img {
         float: right;
         margin-right: 0;
         margin-left: 15px;
@@ -858,6 +916,8 @@ button {
     outline: none;
     text-align: center;
     -webkit-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
@@ -897,6 +957,7 @@ button {
             margin-right: 5px;
             -webkit-transition: all 0.5s;
             -o-transition: all 0.5s;
+            -ms-transition: all 0.5s;
             transition: all 0.5s;
         }
 
@@ -1048,10 +1109,11 @@ button {
     letter-spacing: 1.5px;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
     transition: all 0.5s;
 }
 
-    .mu-register-btn:hover,
+.mu-register-btn:hover,
     .mu-register-btn:focus,
     .mu-popular-price .mu-register-btn {
         color: #fff;
@@ -1068,6 +1130,8 @@ button {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     text-align: center;
 }
@@ -1078,8 +1142,11 @@ button {
 
 #mu-register {
     background-image: url("assets/images/register-bg.jpg");
+    -ms-background-position: center center;
     background-position: center center;
+    -ms-background-size: cover;
     background-size: cover;
+    -ms-background-attachment: fixed;
     background-attachment: fixed;
     display: inline;
     float: left;
@@ -1087,16 +1154,18 @@ button {
     width: 100%;
 }
 
-    #mu-register::before {
-        background: rgba(0,0,0,0.9);
+#mu-register::before {
+    background: #000000;
+    background: rgba(0,0,0,0.9);
         bottom: 0;
         content: '';
         left: 0;
         top: 0;
         right: 0;
         position: absolute;
-        opacity: 0.9;
-    }
+    -ms-opacity: 0.9;
+    opacity: 0.9;
+}
 
 .mu-register-area {
     display: inline;
@@ -1163,6 +1232,7 @@ button {
     letter-spacing: 1px;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -1231,12 +1301,14 @@ button {
 }
 
     .mu-faq-content .panel-default {
+        -ms-border-radius: 0;
         border-radius: 0;
         border-color: #fff;
+        box-shadow: 0 2px 3px 0 #000000;
         box-shadow: 0 2px 3px 0 rgba(0,0,0,0.06);
     }
 
-        .mu-faq-content .panel-default > .panel-heading {
+.mu-faq-content .panel-default > .panel-heading {
             color: #333;
             background-color: #fff;
             border-color: #ddd;
@@ -1258,10 +1330,11 @@ button {
             padding: 12px 15px;
             -webkit-transition: all 0.5s;
             -o-transition: all 0.5s;
+            -ms-transition: all 0.5s;
             transition: all 0.5s;
         }
 
-            .mu-faq-content .panel-title a > span {
+.mu-faq-content .panel-title a > span {
                 margin-right: 5px;
             }
 
@@ -1314,6 +1387,7 @@ button {
 
     .mu-contact-form .form-group input {
         background: transparent;
+        -ms-border-radius: 5px;
         border-radius: 5px;
         color: #333;
         font-size: 15px;
@@ -1322,17 +1396,18 @@ button {
         margin-bottom: 24px;
     }
 
-    .mu-contact-form .form-group textarea {
-        background: transparent;
+.mu-contact-form .form-group textarea {
+    background: transparent;
         border: 1px solid #888;
-        border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
         color: #333;
         font-size: 18px;
         padding: 10px;
         height: 190px;
-    }
+}
 
-    .mu-contact-form .form-control:focus {
+.mu-contact-form .form-control:focus {
         background-color: #fff;
         outline: 0;
         box-shadow: none;
@@ -1377,18 +1452,22 @@ button {
     border: 1px solid #d6e9c6;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
     border-radius: 4px;
 }
 
 .error {
-    padding: 1em;
+    /*padding: 1em;*/
     margin-bottom: 0.75rem;
+    text-shadow: 0 1px 0 #ffffff;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
     color: #b94a48;
     background-color: #f2dede;
+    border: 1px solid #b94a48;
     border: 1px solid rgba(185, 74, 72, 0.3);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
     border-radius: 4px;
 }
 
@@ -1436,6 +1515,9 @@ button {
         margin-right: 10px;
         text-align: center;
         text-decoration: none;
+        -ms-transition: all 0.2s ease-in-out 0s;
+        -o-transition: all 0.2s ease-in-out 0s;
+        -webkit-transition: all 0.2s ease-in-out 0s;
         transition: all 0.2s ease-in-out 0s;
         width: 35px;
         height: 35px;
@@ -1457,6 +1539,7 @@ button {
         /*font-weight: 600;*/
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
+        -ms-transition: all 0.5s;
         transition: all 0.5s;
     }
 
@@ -1776,7 +1859,7 @@ button {
         .mu-event-timeline ul li:nth-child(2n+1) .mu-single-event,
         .mu-event-timeline ul li:nth-child(2n) .mu-single-event {
             left: 30px;
-            width: 350px;
+            width: 300px;
         }
 
             .mu-event-timeline ul li .mu-single-event h3 {
@@ -1802,7 +1885,7 @@ button {
 @media (max-width: 360px) {
 
     .mu-logo img {
-        width: 120px;
+        /*width: 120px;*/
     }
 
     .mu-hero-featured-area {
@@ -1931,5 +2014,5 @@ ul.nav-center li.active > a {
 }
 
 .progress .separator {
-    width: 2px; height: 49px; background: #5966e6; position: absolute; top: 6px;
+    width: 3px; height: 49px; background: #5966e6; position: absolute; top: 0px;
 }

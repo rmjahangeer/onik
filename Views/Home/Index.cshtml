@@ -22,8 +22,8 @@
                 </div>
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-                            <div class="progress" style="margin-top: 20px">
+                        <div class="col-md-8 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 progressBar-multra">
+                            <div class="progress" style="margin-top: 20px; border-radius: 1px;">
 
                                 <div style="width: 20px;" class="hidden-xs hidden-sm">
                                     <div style="" class="separator"></div>
@@ -31,7 +31,7 @@
                                 </div>
 
                                 <div style="width: 20px;" class="hidden-xs hidden-sm">
-                                    <div class="separator" style="left: 21%;"></div>
+                                    <div class="separator" style="left: 20%;"></div>
                                     <div class="labels" style="left: 19%;">100 M</div>
                                 </div>
 
@@ -41,16 +41,16 @@
                                 </div>
 
                                 <div style="width: 20px;" class="hidden-xs hidden-sm">
-                                    <div class="separator" style="left: 59.5%"></div>
+                                    <div class="separator" style="left: 60%"></div>
                                     <div class="labels" style="left: 57%;">300 M</div>
                                 </div>
 
                                 <div style="width: 20px;" class="hidden-xs hidden-sm">
-                                    <div class="separator" style="left: 79%"></div>
+                                    <div class="separator" style="left: 80%"></div>
                                     <div class="labels" style="left: 77%;">400 M</div>
                                 </div>
                                 <div style="width: 20px;" class="hidden-xs hidden-sm">
-                                    <div class="separator" style="left: 98.2%"></div>
+                                    <div class="separator" style="left: 100%"></div>
                                     <div class="labels" style="left: 95%;">500 M</div>
                                 </div>
 
@@ -767,7 +767,7 @@
 
                         <br />
                         <div class="text-center center-align">
-                            <a target="_blank" href="https://www.multra-gmbh.com/" class="btn btn-outline btn-lg text-uppercase pull-left">GO to MulTra GmbH</a>
+                            <a target="_blank" href="https://www.multra-gmbh.com/" class="btn btn-outline btn-lg text-uppercase">GO to MulTra GmbH</a>
                         </div>
                     </div>
                 </div>
@@ -1088,8 +1088,21 @@
 @section scripts
 {
     @Scripts.Render("~/bundles/jqueryval")
-
+    
     <script>
+        function validatenumerics(evt, obj) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            var value = obj.value;
+            var dotcontains = value.indexOf(".") !== -1;
+            if (dotcontains)
+                if (charCode == 46) return false;
+            if (charCode == 46) return true;
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+
+
+        }
         $(document).ready(function () {
             $('#Male').select();
             $('#Male').select();
@@ -1103,12 +1116,14 @@
                     $('#proceed').attr('disabled', 'disabled');
                 }
             });
-            $('ul.timeline.timeline-horizontal .timeline-item.1 div').addClass('active');
+            $('bs-wizard step1').addClass('active');
             $('#proceed').on('click', function () {
                 $('#step1').addClass('hidden');
                 $('#step2').removeClass('hidden');
                 $('#step2').fadeIn();
-                $('ul.timeline.timeline-horizontal .timeline-item.2 div').addClass('active');
+                $('.bs-wizard .step1').removeClass('active');
+                $('.bs-wizard .step1').addClass('complete');
+                $('.bs-wizard .step2').addClass('active');
             });
 
             //$('#proceed2').on('click', processStep2);
@@ -1158,7 +1173,9 @@
                 $('#step2').addClass('hidden');
                 $('#step3').removeClass('hidden');
                 $('#step3').fadeIn();
-                $('ul.timeline.timeline-horizontal .timeline-item.3 div').addClass('active');
+                $('.bs-wizard .step2').removeClass('active');
+                $('.bs-wizard .step2').addClass('complete');
+                $('.bs-wizard .step3').addClass('active');
                 event.preventDefault();
                 validator.resetForm();
                 return false;
@@ -1192,7 +1209,9 @@
                     $('#step3').addClass('hidden');
                     $('#step4').removeClass('hidden');
                     $('#step4').fadeIn();
-                    $('ul.timeline.timeline-horizontal .timeline-item.4 div').addClass('active');
+                    $('.bs-wizard .step3').removeClass('active');
+                    $('.bs-wizard .step3').addClass('complete');
+                    $('.bs-wizard .step4').addClass('active');
                     $('#finishButton').attr('disabled', 'disabled');
                     $('button.close').hide();
                     setTimeout(function () {

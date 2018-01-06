@@ -232,4 +232,15 @@
         $('.mu-navbar .in').collapse('hide');
     });
 
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    $('.modal').on('shown.bs.modal', function () {
+        if (iOS && $('.modal').hasClass('in')) {
+            $('html,body').addClass('safari-nav-force');
+        }
+    });
+    $('.modal').on('hidden.bs.modal', function () {
+        if (iOS && !$('.modal').hasClass('in')) {
+            $('html,body').removeClass('safari-nav-force');
+        }
+    });
 })(jQuery);
